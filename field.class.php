@@ -26,6 +26,13 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once(__DIR__ . '/../menu/field.class.php');
 
+/**
+ * Class lockablemenu field for database activity
+ *
+ * @package    datafield_lockabletext
+ * @copyright  2024 onwards Lafayette College ITS
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class data_field_lockablemenu extends data_field_menu {
     /** @var string The internal datafield type */
     public $type = 'lockablemenu';
@@ -48,7 +55,7 @@ class data_field_lockablemenu extends data_field_menu {
                 $fieldname = 'field_' . $this->field->id;
                 $content = $formdata->$fieldname;
             } else if ($recordid) {
-                $content = $DB->get_field('data_content', 'content', array('fieldid'=>$this->field->id, 'recordid'=>$recordid));
+                $content = $DB->get_field('data_content', 'content', ['fieldid' => $this->field->id, 'recordid' => $recordid]);
                 $content = trim($content);
             } else {
                 $content = '';

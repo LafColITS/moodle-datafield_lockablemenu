@@ -15,8 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    datafield
- * @subpackage lockablemenu
+ * Version information for datafield_lockablemenu.
+ *
+ * @package    datafield_lockablemenu
  * @copyright  2024 onwards Lafayette College ITS
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
